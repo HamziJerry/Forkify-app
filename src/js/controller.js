@@ -11,10 +11,6 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import { async } from 'regenerator-runtime';
 
-// if (module.hot) {
-//   module.hot.accept();
-// }
-
 const controlRecipes = async function () {
   try {
     const id = window.location.hash.slice(1);
@@ -50,7 +46,6 @@ const controlSearchResult = async function () {
     await model.loadSearchResults(query);
 
     // 3) Render Result
-    // resultsView.render(model.state.search.results);
     resultsView.render(model.getSearchResultsPage());
 
     // 4) Render initial Pagination buttons
@@ -71,7 +66,6 @@ const controlServings = function (newServings) {
   // 1) Update the recipe Servings (in state)
   model.updateServings(newServings);
   // 2) Update the recipe view
-  // recipeView.render(model.state.recipe);
   recipeView.update(model.state.recipe);
 };
 
