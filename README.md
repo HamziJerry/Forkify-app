@@ -19,3 +19,5 @@ Built using the MVC Architecture.
 The app is using the Forkify recipe API in order to fetch recipe information.
 
 ## Live Working Project Url
+
+https://forkify-hamzi.netlify.app/
